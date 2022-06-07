@@ -1,0 +1,96 @@
+name: "\U0001F41E Bug report"
+description: Use this template to report a bug.
+labels:
+  - bug
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: "A short and clear description of what the problem is."
+      placeholder: A short description of the issue.
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Reproduction steps
+      description: "How do you encounter this bug? Please explain the steps to reproduce."
+      value: |
+        1.
+        2.
+        3.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      placeholder: What do you expect to happen or see?
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+      placeholder: What do you see instead?
+    validations:
+      required: true
+  - type: dropdown
+    id: devices
+    attributes:
+      label: Device
+      description: What device were you using when the issue appeared?
+      options:
+        - Desktop
+        - Laptop
+        - Smartphone
+        - Tablet (e.g. iPad)
+        - Other (specify below)
+    validations:
+      required: true
+  - type: dropdown
+    id: browsers
+    attributes:
+      label: Browser
+      description: What browser were you using?
+      options:
+        - Chrome
+        - Edge
+        - Firefox
+        - Safari
+        - Other (specify below)
+    validations:
+      required: true
+  - type: dropdown
+    id: browser-version
+    attributes:
+      label: Browser version
+      description: What browser release channel were you using?
+      options:
+        - Stable
+        - Pre-release (e.g. Beta, Nightly or Canary)
+        - Extended Support Release
+        - Other version (specify below)
+    validations:
+      required: true
+  - type: dropdown
+    id: operating-systems
+    attributes:
+      label: Operating system
+      description: What operating system were you using?
+      options:
+        - Android
+        - iOS
+        - Linux
+        - Mac OS
+        - Windows
+        - Other (specify below)
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Extra comments
+      description: Please enter any extra info that could be of use. If you selected 'other version' as Browser version, please fill in your exact version here.
+    validations:
+      required: false
