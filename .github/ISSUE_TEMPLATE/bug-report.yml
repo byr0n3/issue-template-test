@@ -12,9 +12,9 @@ body:
     validations:
       required: true
   - type: textarea
-    id: repro
+    id: reproduce
     attributes:
-      label: Reproduction steps
+      label: How to reproduce
       description: "How do you encounter this bug? Please explain the steps to reproduce."
       value: |
         1.
@@ -36,8 +36,14 @@ body:
       placeholder: What do you see instead?
     validations:
       required: true
+  - type: input
+    attributes:
+      label: Renum version
+      description: The exact version of Renum that you're using
+    validations:
+      required: true
   - type: dropdown
-    id: devices
+    id: device
     attributes:
       label: Device
       description: What device were you using when the issue appeared?
@@ -50,7 +56,7 @@ body:
     validations:
       required: true
   - type: dropdown
-    id: browsers
+    id: browser
     attributes:
       label: Browser
       description: What browser were you using?
@@ -59,6 +65,7 @@ body:
         - Edge
         - Firefox
         - Safari
+        - Opera
         - Other (specify below)
     validations:
       required: true
@@ -69,13 +76,12 @@ body:
       description: What browser release channel were you using?
       options:
         - Stable
-        - Pre-release (e.g. Beta, Nightly or Canary)
-        - Extended Support Release
+        - Pre-release
         - Other version (specify below)
     validations:
       required: true
   - type: dropdown
-    id: operating-systems
+    id: operating-system
     attributes:
       label: Operating system
       description: What operating system were you using?
@@ -83,7 +89,7 @@ body:
         - Android
         - iOS
         - Linux
-        - Mac OS
+        - MacOS
         - Windows
         - Other (specify below)
     validations:
@@ -91,6 +97,6 @@ body:
   - type: textarea
     attributes:
       label: Extra comments
-      description: Please enter any extra info that could be of use.
+      description: Please enter any extra information that could be of use.
     validations:
       required: false
